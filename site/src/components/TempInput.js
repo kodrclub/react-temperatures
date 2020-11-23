@@ -6,10 +6,22 @@ const scales = {
   f: 'Fahrenheit',
 };
 
-export default function TempInput(props) {
+const TempInput = ({ value, setValue, scale }) => {
+  const valueDidChange = (e) => {
+    const v = e.target.value;
+    setValue(v);
+  };
+
   return (
     <div className="main">
-      <input type="text" placeholder={scales[props.scale]} />
+      <input
+        type="text"
+        placeholder={scales[scale]}
+        value={value}
+        onChange={valueDidChange}
+      />
     </div>
   );
-}
+};
+
+export default TempInput;

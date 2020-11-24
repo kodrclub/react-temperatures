@@ -14,6 +14,7 @@ const TempInput = ({ value, setValue, scale }) => {
 
   return (
     <div className="main">
+      <label>{scales[scale]}</label>
       <input
         type="text"
         placeholder={scales[scale]}

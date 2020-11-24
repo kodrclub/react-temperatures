@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BoilVeredict from './BoilVeredict';
 import TempInput from './TempInput';
 
 const Calculator = () => {
@@ -36,6 +37,7 @@ const Calculator = () => {
 
   return (
     <div>
+      <BoilVeredict celsius={celsius} />
       <TempInput value={celsius} setValue={celsiusDidChange} scale="c" />
       <TempInput value={fahrenheit} setValue={fahrenheitDidChange} scale="f" />
     </div>
